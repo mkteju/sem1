@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<conio.h>
+#define size 20
+void quick_sort(int [],int,int);
+int i,n,j,temp;
+int key,lb,ub,flag=0;
+void main()
+{
+ int a[size];
+ clrscr();
+ printf("enter number of elements:");
+ scanf("%d",&n);
+ for(i=0;i<n;i++)
+ {
+  printf("\n enter %d element:",i+1);
+  scanf("%d",&a[i]);
+ }
+ lb=0;
+ ub=n-1;
+ quick_sort(a,lb,ub);
+ printf("\n sorted array is..");
+ for(i=0;i<n;i++)
+ {
+  printf("%d \t",a[i]);
+ }
+ getch();
+}
+void quick_sort(int a[],int lb,int ub)
+{
+ int flag=0;
+ if(lb<ub)
+ {
+  i=lb;
+  j=ub;
+  key=a[lb];
+  while(flag==0)
+  {
+   i=i+1;
+   while(a[i]<key)
+   {
+    i=i+1;
+   }
+   while(a[j]>key)
+   {
+    j=j-1;
+   }
+   if(i<j)
+   {
+    temp=a[i];
+    a[i]=a[j];
+    a[j]=temp;
+   }
+   else
+   {
+    flag=1;
+    temp=a[lb];
+    a[lb]=a[j];
+    a[j]=temp;
+   }
+  }
+  quick_sort(a,lb,j-1);
+  quick_sort(a,j+1,ub);
+ }
+}

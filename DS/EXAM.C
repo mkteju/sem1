@@ -1,0 +1,52 @@
+#include<stdio.h>\\stack
+#include<conio.h>
+int n,s[10],top=0;
+void main()
+{
+ int ch;
+ void push();
+ void display();
+ clrscr();
+ printf("\n enter the size of stack:");
+ scanf("%d",&n);
+ do
+ {
+  clrscr();
+  printf("\n 1.push");
+  printf("\n 2.display");
+  printf("\n 3.exit");
+  printf("\n enter your choice:");
+  scanf("%d",&ch);
+  switch(ch)
+  {
+   case 1:push();
+   break;
+   case 2:display();
+   break;
+   case 3:
+   break;
+  }
+ getch();
+ }while(ch!=3);
+}
+void push()
+{
+ if(top>=n)
+ {
+  printf("\n stack is overflow");
+ }
+ else
+ {
+  top++;
+  printf("enter the element:");
+  scanf("%d",&s[top]);
+ }
+}
+void display()
+{
+ int i;
+ for(i=1;i<=top;i++)
+ {
+  printf("%d \n",s[i]);
+ }
+}
