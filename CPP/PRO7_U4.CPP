@@ -1,0 +1,35 @@
+#include<iostream.h>\\pro7_u4
+#include<fstream.h>
+#include<string.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+ int roll_num,r_no;
+ char name[30],f_name[30];
+ clrscr();
+ //tack input for user
+ cout<<"enter your roll number:";
+ cin>>roll_num;
+ cout<<"enter your name:";
+ gets(name);
+
+ //write in file
+ ofstream fout("mydata.txt");
+ fout<<roll_num;
+ for(int i=0;i<strlen(name);i++)
+ {
+ fout.put(name[i]);
+ }
+  fout.put('/n');
+  fout.close();
+
+  //read from file
+  ifstream fin("mydata.txt");
+  fin>>r_no;
+  cout<<"Roll number="<<r_no<<endl;
+  fin_getline(f_name,30);
+  cout<<"Name="<<f_name;
+  fin.close();
+  getch();
+}

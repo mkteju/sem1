@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+#define pi 3.14
+float area(float radius);
+float area(float l,float b);
+int area(int l=9);
+void main()
+{
+ clrscr();
+ float radius=4,l,b;
+ int length=5;
+ cout<<"area of circle is:"<<area(radius);
+
+ cout<<"\n enter length and breadth";
+ cin>>l>>b;
+ cout<<"area of rectangle is:"<<area(l,b);
+
+ cout<<"\n area of square is:"<<area();
+ cout<<"\n area of square is:"<<area(length);
+ getch();
+}
+float area(float radius)
+{
+ float ans;
+ ans=pi*radius*radius;
+ return ans;
+}
+float area(float l,float b)
+{
+ float ans;
+ ans=l*b;
+ return ans;
+}
+int area(int l)
+{
+ int ans;
+ ans=l*l;
+ return ans;
+}

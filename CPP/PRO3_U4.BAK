@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+template<class T>
+void bubblesort(T arr[],int n)
+{
+ for(int i=0;i<n-1;i++)
+ {
+  for(int j=0;j<n-1;j++)
+  {
+   if(arr[j]>arr[j+1])
+   {
+    T temp=arr[j+1];
+    arr[j+1]=arr[j];
+    arr[j]=temp;
+   }
+  }
+ }
+}
+template<class T>
+void printArray(T arr[],int n)
+{
+ for(int i=0;i<n;i++)
+  cout<<arr[i]<<" ";
+}
+void main()
+{
+ int arr[]={1,23,2,10,5};
+ int arrsize=5;
+ clrscr();
+ bubblesort(arr,arrsize);
+ printArray(arr,arrsize);
+ getch();
+}

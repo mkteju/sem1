@@ -1,0 +1,53 @@
+#include<iostream.h>//pro2_u3
+#include<conio.h>
+class shape
+{
+ protected:
+    double len;
+    double width;
+ public:
+   void get_data()
+  {
+   cout<<"enter length:";
+   cin>>len;
+   cout<<"enter width:";
+   cin>>width;
+  }
+  virtual void display_area();
+};
+void shape::display_area()
+{
+ cout<<"This function is used to calculate the area";
+}
+class triangle:public shape
+{
+ public:
+   void display_area();
+};
+void triangle::display_area()
+{
+ cout<<"Area od triangle:"<<(len*width)/2<<endl;
+}
+class rectangle:public shape
+{
+ public:
+   void display_area();
+};
+void rectangle::display_area()
+{
+ cout<<"Area of ractangle:"<<(len*width);
+}
+void main()
+{
+ shape *sp;
+ triangle tr;
+ rectangle rct;
+ clrscr();
+ tr.get_data();
+ sp=&tr;
+ sp->display_area();
+ rct.get_data();
+ sp=&rct;
+ sp->display_area();
+ getch();
+}

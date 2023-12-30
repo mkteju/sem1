@@ -1,0 +1,64 @@
+#include<iostream.h>
+#include<conio.h>
+class currency
+{
+  int rupees;
+  int paisa;
+  friend currency Addcurrency(currency,currency);
+  public:
+  currency()
+  {
+	rupees=paisa=0;
+  }
+  currency(int x,int y)
+  {
+	rupees=x;
+	paisa=y;
+  }
+	void get_data();
+	void display_data();
+
+  ~currency()
+  {
+    rupees=paisa=0;
+  }
+};
+currency Addcurrency(currency c1,currency c2)
+{
+	currency c;
+	c.rupees=c1.rupees+c2.rupees;
+	c.paisa=c1.paisa+c2.paisa;
+	if(c.paisa>100)
+	{
+		c.rupees=c.rupees+(c.paisa/100);
+		c.paisa=c.paisa%100;
+	}
+	 return c;
+}
+void currency::get_data()
+{
+	cout<<"Enter Rupees:";
+	cin>>rupees;
+	cout<<"Enter Paisa:";
+	cin>>paisa;
+}
+void currency::display_data()
+{
+  cout<<"\nTotal rupees="<<rupees<<endl
+  <<"Total Paisa="<<paisa;
+}
+void main()
+{
+	currency cur;
+	currency c1(0,0);
+	currency c2(0,0);
+	clrscr();
+	c1.get_data();
+	c2.get_data();
+	cur=Addcurrency(c1,c2);
+	cur.display_data();
+	getch();
+
+}
+	
+  

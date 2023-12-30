@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+class test
+{
+ private:
+	int x;
+	int y;
+ public:
+	test & setx(int x)
+	{
+	 this->x=x;
+	 return *this;
+	}
+	test & sety(int y)
+	{
+	 this->y=y;
+	 return *this;
+	}
+	void print()
+	{
+	 cout<<"x="<<x;
+	 cout<<"y="<<y;
+	}
+};
+void main()
+{
+ test t1;
+ clrscr();
+ t1.setx(10).sety(20).print();
+ getch();
+}

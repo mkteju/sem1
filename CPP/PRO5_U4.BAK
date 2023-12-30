@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<fstream.h>
+#include<conio.h>
+void main()
+{
+ char c,ch[11];
+ clrscr();
+ ofstream fout("Temp.txt");
+ for(int i=0;i<25;i++)
+ {
+  cin>>c;
+  fout.put(c);
+ }
+ fout.put('\n');
+ fout.close();
+ ifstream fim("temp.txt");
+ c=fin.get();
+ cout<<"output of get()="<<c<<endl;
+ fin.getline(ch,11);
+ cout<<"output of getline()="<<ch;
+ fin.close();
+ getch();
+}

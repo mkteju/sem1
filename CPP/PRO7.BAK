@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+class class1
+{
+ int a;
+ friend void swap();
+ public:
+ void getdata()
+ {
+  cout<<"Enter value of a:";
+  cin>>a;
+ }
+ void display()
+ {
+  cout<<"\n After swap a="<<a;
+ }
+};
+class class2
+{
+ int b;
+ friend void swap();
+ public:
+ void getdata()
+ {
+  cout<<"Enter value of b:";
+  cin>>b;
+ }
+ void display()
+ {
+  cout<<"\n After swap b="<<b;
+ }
+};
+getch();
+}

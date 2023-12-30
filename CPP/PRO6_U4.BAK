@@ -1,0 +1,30 @@
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+ int a;
+ char c,ch[11];
+ clrscr();
+ ofstream fout("data.txt");
+ cout<<"enter number:";
+ cin>>a;
+ fout<<a;
+ cout<<"enter string:";
+ for(int i=0;i<25;i++)
+ {
+  cin>>c;
+  fout.put(c);
+ }
+ fout.put('\n');
+ fout.close();
+ ifstream fin("data.txt");
+ fin>>a;
+ cout<<"number is:"<<a<<endl;
+ c=fin.get();
+ cout<<"output of get()="<<c<<endl;
+ fin.getline(ch,11);
+ cout<<"output of getline()="<<ch;
+ fin.close();
+ getch();
+}
