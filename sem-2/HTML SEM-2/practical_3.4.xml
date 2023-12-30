@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE student[
+<!ELEMENT student (#PCDATA|id|name|subject)*>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name EMPTY>
+<!ELEMENT subject ANY>
+]>
+<student>
+<id>45678</id>
+<name></name>
+<subject>subject 1</subject>
+</student>

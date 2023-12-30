@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE empinfo[
+<!ELEMENT empinfo (employee)>
+<!ELEMENT employee (designation)>
+<!ATTLIST employee id ID #REQUIRED>
+<!ATTLIST employee user_id IDREF #REQUIRED>
+<!ELEMENT designation (#PCDATA)>
+<!ATTLIST designation discipline NMTOKEN "web-developer">
+]>
+<empinfo>
+  <employee id="1" user_id="2">
+  <designation discipline="DBA">senior Engineer</designation>
+  </employee>
+  <employee id="2" user_id="3">
+  <designation discipline="softwere_developer">Administrator</designation>
+  </employee>
+  <employee id="3" user_id="4">
+  <designation>senior engineer</designation>
+</employee>
+</empinfo>  

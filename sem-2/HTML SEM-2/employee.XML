@@ -1,0 +1,14 @@
+<?XML version="1.0">
+<!doctype employee[
+<!ELEMENT employee(name,designation,email)>
+<!ELEMENT employee id DATA #REQUIRED>
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT designation(#PCDATA)>
+<!ELEMENT email(#PCDATA)>
+<!ENTITY Er"Engineer">
+]>
+<employee id="1">
+<name>hinal</name>
+<designation>senior &Er;</designation>
+<email>gohelhnal@123gmail.com</email>
+</employee>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<EXAM_RESULT>
+  <RollNo>1</RollNo>
+  <Student_Name>abc</Student_Name>
+<Subject.1>
+   <Subject.1_Name>gujrati</Subject.1_Name>
+   <Subject.1_Marks>88</Subject.1_Marks>
+</Subject.1>
+<Subject.2>
+   <Subject.2_Name>english</Subject.2_Name>
+   <Subject.2_Marks>78</Subject.2_Marks>
+</Subject.2>
+<Subject3>
+   <Subject3_Name>science</Subject3_Name>
+   <Subject3_Marks>67</Subject3_Marks>
+</Subject3>
+  <Total_Marks>233</Total_Marks>
+  <Persentage>77.66%</Persentage>
+  <Result>A</Result>
+</EXAM_RESULT>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<STUDENT_DETAIL>
+ <Students>
+  <student1>
+   <Student1_rollno>1</Student1_rollno>
+   <Student1_Name>Hinal</Student1_Name>
+  </student1>
+  <student2>
+   <Student2_rollno>2</Student2_rollno>
+   <Student2_Name>Kartik</Student2_Name>
+  </student2>
+  <student3>
+   <Student3_rollno>3</Student3_rollno>
+   <Student3_Name>Dimpal</Student3_Name>
+  </student3>
+ </Students>
+</STUDENT_DETAIL>

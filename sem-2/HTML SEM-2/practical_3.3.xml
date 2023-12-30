@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE Bookstore SYSTEM "dtd1.dtd">
+<Bookstore>
+<Book price="100">
+<Title>Database ststem</Title>
+ <Authors>
+  <Author>
+  <First_Name>Hector</First_Name>
+  <Lste_Name>Garcia molina</Lste_Name>
+  </Author>
+  <Author>
+  <First_Name>Jennifer</First_Name>
+  <Lste_Name>Widom</Lste_Name>
+  </Author>
+ </Authors>
+ <Remark>
+ Buy this book bundle with"A First Course"-a great deal!
+ </Remark>
+ </Book>
+ </Bookstore>

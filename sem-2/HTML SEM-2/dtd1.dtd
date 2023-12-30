@@ -1,0 +1,9 @@
+<!Doctype Bookstore[
+<!ELEMENT Bookstore (book|Magazine)*>
+<!ELEMENT Book (Title,Author,Remark?)>
+<!ELEMENT Bookprice CDATA #REQUIRED
+            Edition CDATA #IMPLIED>
+<!ELEMENT Magazine (Title)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Authors (#PCDATA)>
+[>

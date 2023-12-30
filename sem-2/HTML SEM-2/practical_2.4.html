@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>practical</title>
+<script "text/javascript">
+function display()
+{
+var a=document.getElementById("name").value;
+ if(a==" ")
+ {
+ document.getElementById("message").innerHTML="please fill the name";
+ return false;
+ }
+ if(a.length<3)
+ {
+ document.getElementById("message").innerHTML="enter more than 3 character";
+ return false;
+ }
+ if(a.length>15)
+ {
+ document.getElementById("message").innerHTML="enter less than 15 character";
+ return false;
+ }
+ var exp=/^[A-Za-z]+$/;
+ if(a.match(exp))
+ return true;
+ else
+ {
+ document.getElementById("message").innerHTML="enter only character";
+ return false;
+ }
+} 
+</script>
+</head>
+<body>
+<form>
+Enter your Name:<input type="text" id="name"/>
+<span id="message"></span><br>
+<input type="submit" value="submit" onclick="display()"/>
+</form>
+</body>
+</html>
